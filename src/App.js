@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+import PhotoContextProvider from "./context/PhotoContext"
+import Header from './component/Header'
+import Biryani from './component/Biryani'
+import ButterChicken from './component/ButterChicken'
+import Dosa from './component/Dosa'
+import Idly from './component/Idly'
+import Samosa from './component/Samosa'
+import Dessert from './component/Dessert'
+import Footer from './component/Footer'
+import AllFoodContainer from './component/AllFoodContainer'
+
+export default function App() {
+	return (
+		<PhotoContextProvider>
+				<div className="App">
+					<Header />
+					<AllFoodContainer />
+					<Biryani />
+					<ButterChicken />
+					<Dosa />
+					<Idly />
+					<Samosa />
+					<Dessert />
+					<Footer />
+				</div>
+		</PhotoContextProvider>
+	);
 }
+					
+					
+	
 
-export default App;
+ 
+
+			
